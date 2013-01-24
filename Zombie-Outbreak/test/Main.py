@@ -6,3 +6,5 @@ Created on 24 janv. 2013
 print ("hello world")
 
 print("coucou")
+
+print("bonjour le monde")
