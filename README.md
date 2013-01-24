@@ -1,7 +1,7 @@
 Zombie-Outbreak
 ===============
 
-Etape 1/ Faire fonctionner Git avec Eclipse sur tous  nos PC => en cours Antoine P
+Etape 1/ Faire fonctionner Git avec Eclipse sur tous  nos PC => done !
 
 Etape 2/ Commencer la conception du logiciel et préparer les fonctionnalités => en cours Nico
 
