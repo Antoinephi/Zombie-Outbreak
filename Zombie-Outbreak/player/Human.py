@@ -6,6 +6,8 @@ Created on 29 janv. 2013
 
 from player.Entity import Entity
 from player.Zombi import Zombi
+from player.Berzerk import Berzerk
+
 import random
 
 class Human(Entity):
@@ -24,4 +26,9 @@ class Human(Entity):
                 return Zombi(self.getName(),True)
             else: 
                 return Zombi(self.getName(),False)
-        
+        else:
+            probaConta = ((contA - contC) / contA) * (1/4)
+            if(r >= 0 and r <= probaConta):
+                return Berzerk(self.getName())
+            else:
+                self.setAlive(False)    
