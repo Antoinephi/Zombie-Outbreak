@@ -32,3 +32,6 @@ class Entity():
     
     def setAlive(self,b):
         self.alive = b  
+        
+    def printType(self):
+        pass

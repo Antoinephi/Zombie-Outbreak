@@ -12,3 +12,6 @@ class Berzerk(Entity):
         super(Berzerk,self).__init__(s)
         self.berzerkDelay = 10
         self.BERZERK_RADIUS = (2)
+        
+    def printType(self):
+        return "B"    

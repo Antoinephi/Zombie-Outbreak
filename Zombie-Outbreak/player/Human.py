@@ -16,6 +16,9 @@ class Human(Entity):
         super(Human,self).__init__(s)
         if (policier == True):
             self.setBulletAmount(9)
+    
+    def printType(self):
+        return "H"
         
     def transform(self,contA,contC):        
         probaConta = contC / contA

@@ -28,3 +28,6 @@ class Zombi(Entity):
     
     def setContagionCount(self,i):
         self.contagionCount = i
+        
+    def printType(self):
+        return "Z"        
