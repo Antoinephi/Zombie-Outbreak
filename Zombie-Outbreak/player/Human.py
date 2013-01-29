@@ -17,10 +17,11 @@ class Human(Entity):
         
     def transform(self,contA,contC):        
         probaConta = contC / contA
-        r = random.random(0.0,100.0)
-        if(r > 0 and r < probaConta):
+        r = (random.random())
+        print(probaConta , r) 
+        if(r >= 0 and r <= probaConta):
             if (self.getBulletAmount() > 0):
-                self = Zombi(self.getName(),True)
+                return Zombi(self.getName(),True)
             else: 
-                self = Zombi(self.getName(),False)
+                return Zombi(self.getName(),False)
         
