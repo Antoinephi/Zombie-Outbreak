@@ -8,7 +8,7 @@ class Entity():
     
     def __init__(self,s):
         self.name = s
-        self.bulletAmount = 9
+        self.bulletAmount = 0
         self.alive = True
         self.MOVE_LEN = (1)
         self.VIEW_RADIUS = (3)
@@ -32,6 +32,3 @@ class Entity():
     
     def setAlive(self,b):
         self.alive = b  
-        
-    def __str__(self):
-        return ("Nom entite : " , self.name)
