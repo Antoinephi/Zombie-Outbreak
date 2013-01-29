@@ -22,6 +22,3 @@ class Case():
     def isPietinable(self):
         return self.isPietinable
         
-    
-        
-    

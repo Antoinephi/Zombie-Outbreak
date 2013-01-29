@@ -29,7 +29,7 @@ class Arena:
                 else:
                     self.grid[i][j] = CaseWater(coo)
         
-        
+     
         
     def afficher(self):
         for i in range(self.rows):

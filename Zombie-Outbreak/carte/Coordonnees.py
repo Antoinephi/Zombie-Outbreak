@@ -11,4 +11,4 @@ class Coordonnees:
         self.y = y    
   
     def getCoo(self):
-        return self.x, self.y   
+        return self.x, self.y

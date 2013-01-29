@@ -13,4 +13,3 @@ class CaseWater(Case):
               
     def afficher(self):
         print("~", end=' ')
-        
