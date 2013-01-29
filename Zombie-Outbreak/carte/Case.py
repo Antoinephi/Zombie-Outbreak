@@ -3,15 +3,25 @@ Created on 27 janv. 2013
 
 @author: Antoine
 '''
-from carte import Coordonnees
 
-class Case: 
+class Case(): 
     
     
     def __init__(self, coo):
         self.coo = coo
+        self.isFog = True
+        self.isPietinable = True
         
-    def afficher(self):
-        print(".", end=' ')
+        
+    def setFog(self, isFog):
+        self.isFog = isFog
+    
+    def isFog(self):
+        return self.isFog
+        
+    def isPietinable(self):
+        return self.isPietinable
+        
+    
         
     

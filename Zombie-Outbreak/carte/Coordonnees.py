@@ -10,5 +10,5 @@ class Coordonnees:
         self.x = x
         self.y = y    
   
-    def __str__(self):
+    def getCoo(self):
         return self.x, self.y   
