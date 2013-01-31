@@ -4,7 +4,7 @@ Created on 28 janv. 2013
 @author: jolya
 '''
 
-from player.Entity import Entity
+from entities.Entity import Entity
 
 class Zombi(Entity):
     

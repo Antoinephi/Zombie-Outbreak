@@ -4,7 +4,7 @@ Created on 29 janv. 2013
 @author: Antoine
 '''
 
-from player.Entity import Entity
+from entities.Entity import Entity
 
 class Berzerk(Entity):
     

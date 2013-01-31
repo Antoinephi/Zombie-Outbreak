@@ -4,9 +4,9 @@ Created on 29 janv. 2013
 @author: Antoine
 '''
 
-from player.Entity import Entity
-from player.Zombi import Zombi
-from player.Berzerk import Berzerk
+from entities.Entity import Entity
+from entities.Zombi import Zombi
+from entities.Berzerk import Berzerk
 
 import random
 
