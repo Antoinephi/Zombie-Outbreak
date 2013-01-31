@@ -29,7 +29,11 @@ class Arena:
                 else:
                     self.grid[i][j] = CaseWater(coo)
         
-     
+    def getCase(self,rows,cols):
+        return self.grid[rows][cols]
+    
+    def setCase(self,rows,cols,case):
+        self.grid[rows][cols] = case
         
     def afficher(self):
         for i in range(self.rows):
