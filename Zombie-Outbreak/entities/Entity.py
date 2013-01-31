@@ -14,6 +14,13 @@ class Entity():
         self.VIEW_RADIUS = (3)
         self.SHOT_RADIUS = (3)
         self.SHOT_SUCCESS = (50)
+        self.case = None
+    
+    def setCase(self,case):
+        self.case = case
+    
+    def getCase(self):
+        return self.case
         
     def getName(self):
         return self.name

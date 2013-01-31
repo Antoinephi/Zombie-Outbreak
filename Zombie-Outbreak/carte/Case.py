@@ -11,6 +11,7 @@ class Case():
         self.coo = coo
         self.isFog = True
         self.isPietinable = True
+        self.entity = None
         
         
     def setFog(self, isFog):
@@ -20,5 +21,11 @@ class Case():
         return self.isFog
         
     def isPietinable(self):
-        return self.isPietinable
+        return self.isPietinable 
+    
+    def setEntity(self, entity):
+        self.entity = entity
+        self.entity.setCase(self)   
         
+    def getEntity(self):
+        return self.entity
