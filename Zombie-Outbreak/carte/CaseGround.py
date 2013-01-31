@@ -12,7 +12,7 @@ class CaseGround(Case):
         super(CaseGround, self).__init__(coo)
         self.entity = None
         
-    def afficher(self):
+    def print_case(self):
         if (not self.entity) :
             print(".", end=' ')
         else :

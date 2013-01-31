@@ -11,5 +11,5 @@ class CaseWater(Case):
         self.isPietinable = False
         super(CaseWater,self).__init__(coo)
               
-    def afficher(self):
+    def print_case(self):
         print("~", end=' ')

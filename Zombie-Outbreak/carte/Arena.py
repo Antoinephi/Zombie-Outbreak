@@ -35,12 +35,12 @@ class Arena:
     def setCase(self,rows,cols,case):
         self.grid[rows][cols] = case
         
-    def afficher(self):
+    def print_arena(self):
         for i in range(self.rows):
             print(i, end=' ')
         print()
         for i in range(self.rows):
             for j in range(self.cols):
-                    self.grid[i][j].afficher()
+                    self.grid[i][j].print_case()
             print(i)
     
