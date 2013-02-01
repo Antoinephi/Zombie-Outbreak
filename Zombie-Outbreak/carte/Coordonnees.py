@@ -12,3 +12,11 @@ class Coordonnees:
   
     def getCoo(self):
         return self.x, self.y
+    
+    def getX(self):
+        return self.x
+    
+    def getY(self):
+        return self.y
+    
+    

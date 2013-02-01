@@ -8,8 +8,8 @@ from entities.Entity import Entity
 
 class Berzerk(Entity):
     
-    def __int__(self,s):
-        super(Berzerk,self).__init__(s)
+    def __int__(self,s,a):
+        super(Berzerk,self).__init__(s,a)
         self.berzerkDelay = 10
         self.BERZERK_RADIUS = (2)
         

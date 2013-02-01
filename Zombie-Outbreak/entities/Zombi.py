@@ -8,12 +8,12 @@ from entities.Entity import Entity
 
 class Zombi(Entity):
     
-    def __init__(self,s,policier):
+    def __init__(self,s,policier,a):
         self.ATTACK_RADIUS = (1)
         self.CONTAGION_AMOUNT = (10)
         self.contagionCount = 10
         self.CONTAGION_RADIUS = (2)
-        super(Zombi,self).__init__(s)
+        super(Zombi,self).__init__(s,a)
         if (policier == True):
             super(Zombi,self).setBulletAmount(9)
             
