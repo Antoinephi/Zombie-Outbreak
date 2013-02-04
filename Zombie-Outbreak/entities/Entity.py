@@ -4,6 +4,7 @@ Created on 28 janv. 2013
 @author: jolya
 '''
 
+
 class Entity():
     
     def __init__(self,s,a):

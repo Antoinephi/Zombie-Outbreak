@@ -10,7 +10,6 @@ class Case():
     def __init__(self, coo):
         self.coo = coo
         self.isFog = True
-        self.isPietinable = True
         self.entity = None    
     
     def getCoo(self):
@@ -22,13 +21,19 @@ class Case():
     def isFog(self):
         return self.isFog
         
-    def isPietinable(self):
+    def getPietinable(self):
         return self.isPietinable 
     
     def setEntity(self, entity):
         self.entity = entity
         if(entity != None):
-            self.entity.setCase(self)   
+            self.entity.setCase(self)
         
     def getEntity(self):
         return self.entity
+    
+    def initializeEntity(self,arena,entity):
+        pass
+    
+    def print_case(self):
+        pass

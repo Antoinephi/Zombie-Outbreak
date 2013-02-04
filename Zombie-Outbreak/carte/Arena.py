@@ -32,7 +32,9 @@ class Arena:
     def getCase(self,rows,cols):
         return self.grid[rows][cols]
     
-    def setCase(self,rows,cols,case):
+    def setCase(self,case):
+        rows = case.getCoo().getX()
+        cols = case.getCoo().getY()
         self.grid[rows][cols] = case
         
     def print_arena(self):

@@ -8,11 +8,21 @@ from carte.Case import Case
 
 class CaseGround(Case):
     
-    def __init__(self, coo):
+    def __init__(self, coo):        
+        self.isPietinable = True
         super(CaseGround, self).__init__(coo)
-        
+    
+    #Methode pour initialiser une entite dans la case
+    def initializeEntity(self,arena,entity):
+        print("GROUND")
+        self.setEntity(entity)
+    
+    #Methode pour afficher la case Ground sous forme d'un "." pour le mode textuel du jeu     
     def print_case(self):
-        if (not self.entity) :
-            print(".", end=' ')
-        else :
-            print (self.entity.printType(),end=' ')
+            if (self.entity) :
+                print (self.entity.printType(),end=' ')
+            elif(not self.isFog):
+                print(".", end=' ')
+            else:
+                print("*", end=' ')
+        
