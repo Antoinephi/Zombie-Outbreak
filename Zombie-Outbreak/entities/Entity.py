@@ -77,7 +77,7 @@ class Entity():
             print("Pas de munition !")
         else:
             while(tir == False):
-                if(x < 0 or x >= self.arena.getRows() or y < 0 or y >= self.arena.getCols()):
+                if(x < 0 or x >= self.arena.getRows()-1 or y < 0 or y >= self.arena.getCols()-1):
                     print("Rate !")
                     tir = True
                     self.bulletAmount -= 1
@@ -91,6 +91,7 @@ class Entity():
                     caseTo.setAffiche('.')
                 if(caseTo.getType() == "water"):
                     caseTo.setAffiche('~')
-                x = caseTo.getCoo().getX() + direction.x
-                y = caseTo.getCoo().getY() + direction.y
-                caseTo = self.getArena().getCase(x, y)
+                if(tir == False):
+                    x = caseTo.getCoo().getX() + direction.x
+                    y = caseTo.getCoo().getY() + direction.y
+                    caseTo = self.getArena().getCase(x, y)
