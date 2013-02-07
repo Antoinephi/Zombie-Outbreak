@@ -9,7 +9,7 @@ class Case():
     
     def __init__(self, coo):
         self.coo = coo
-        self.isFog = True
+        self.isFog = False
         self.entity = None    
         self.affiche = ' '
         

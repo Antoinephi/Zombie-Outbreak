@@ -23,7 +23,7 @@ class CaseGround(Case):
             if (self.entity) :
                 print (self.entity.printType(), end=' ')
             elif(not self.isFog):
-                print(affiche, end=' ')
+                print(self.affiche, end=' ')
             else:
                 print("*", end=' ')
                 

@@ -11,7 +11,7 @@ class CaseWater(Case):
     def __init__(self, coo):
         super(CaseWater,self).__init__(coo)
         self.isPietinable = False
-        self.affiche('~')
+        self.affiche = '~'
     
     #Methode pour initialiser une entite dans la case et transforme la case Water en case Ground
     def initializeEntity(self,arena,entity):
@@ -26,7 +26,7 @@ class CaseWater(Case):
             if (self.entity) :
                 print(self.entity.printType(), end=' ')
             elif(not self.isFog):
-                print(affiche, end=' ')
+                print(self.affiche, end=' ')
             else:
                 print("*", end=' ')
                 
