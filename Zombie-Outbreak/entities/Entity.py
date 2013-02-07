@@ -4,6 +4,7 @@ Created on 28 janv. 2013
 @author: jolya
 '''
 
+from carte.Direction import Direction
 
 class Entity():
     
@@ -48,26 +49,48 @@ class Entity():
     def printType(self):
         pass
    
-    def rightMove(self):
+    def move(self, direction):
         caseFrom = self.case
-        caseTo = self.getArena().getCase(caseFrom.getCoo().getX(),(caseFrom.getCoo().getY())+self.MOVE_LEN)
-        caseTo.setEntity(self)
-        caseFrom.setEntity(None)
+        x = caseFrom.getCoo().getX() + direction.x
+        y = caseFrom.getCoo().getY() + direction.y
+        if(x < 0): 
+            x = 0
+        if(x >= self.arena.getRows()):
+            x = self.arena.getRows() - 1
+        if(y < 0): 
+            y = 0 
+        if(y >= self.arena.getRows()):
+            y = self.arena.getRows() - 1
+        caseTo = self.getArena().getCase(x, y)
+        if(caseTo.getPietinable() or caseTo.entity):
+            caseFrom.setEntity(None)
+            caseTo.setEntity(self)
+        else:
+            print("Deplacement impossible")
         
-    def leftMove(self):
-        caseFrom = self.case
-        caseTo = self.getArena().getCase(caseFrom.getCoo().getX(),(caseFrom.getCoo().getY())-self.MOVE_LEN)
-        caseTo.setEntity(self)
-        caseFrom.setEntity(None)
-        
-    def upMove(self):
-        caseFrom = self.case
-        caseTo = self.getArena().getCase(caseFrom.getCoo().getX()-self.MOVE_LEN,(caseFrom.getCoo().getY()))
-        caseTo.setEntity(self)
-        caseFrom.setEntity(None) 
-        
-    def downMove(self):
-        caseFrom = self.case
-        caseTo = self.getArena().getCase(caseFrom.getCoo().getX()+self.MOVE_LEN,(caseFrom.getCoo().getY()))
-        caseTo.setEntity(self)
-        caseFrom.setEntity(None)
+    def tir(self, direction):
+        x = self.case.getCoo().getX() + direction.x
+        y = self.case.getCoo().getY() + direction.y
+        caseTo = self.getArena().getCase(x, y)
+        tir = False
+        if(self.bulletAmount == 0):
+            print("Pas de munition !")
+        else:
+            while(tir == False):
+                if(x < 0 or x >= self.arena.getRows() or y < 0 or y >= self.arena.getCols()):
+                    print("Rate !")
+                    tir = True
+                    self.bulletAmount -= 1
+                if(caseTo.entity):
+                    print("Touche !")
+                    tir = True                        
+                    self.bulletAmount -= 1
+                caseTo.setAffiche('o')
+                self.getArena().print_arena()
+                if(caseTo.getType() == "ground"):
+                    caseTo.setAffiche('.')
+                if(caseTo.getType() == "water"):
+                    caseTo.setAffiche('~')
+                x = caseTo.getCoo().getX() + direction.x
+                y = caseTo.getCoo().getY() + direction.y
+                caseTo = self.getArena().getCase(x, y)

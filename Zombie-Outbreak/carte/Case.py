@@ -28,6 +28,12 @@ class Case():
         self.entity = entity
         if(entity != None):
             self.entity.setCase(self)
+    
+    def setAffiche(self, caractere):
+        self.affiche = caractere
+        
+    def getType(self):
+        return "case"
         
     def getEntity(self):
         return self.entity

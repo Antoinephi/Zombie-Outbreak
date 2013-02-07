@@ -20,9 +20,13 @@ class CaseGround(Case):
     #Methode pour afficher la case Ground sous forme d'un "." pour le mode textuel du jeu     
     def print_case(self):
             if (self.entity) :
-                print (self.entity.printType(),end=' ')
+                print (self.entity.printType(), end=' ')
             elif(not self.isFog):
                 print(".", end=' ')
             else:
                 print("*", end=' ')
+                
+    def getType(self):
+        return "ground"
+
         
