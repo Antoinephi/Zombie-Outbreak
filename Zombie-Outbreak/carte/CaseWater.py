@@ -9,8 +9,9 @@ from carte.CaseGround import CaseGround
 class CaseWater(Case):
     
     def __init__(self, coo):
-        self.isPietinable = False
         super(CaseWater,self).__init__(coo)
+        self.isPietinable = False
+        self.affiche('~')
     
     #Methode pour initialiser une entite dans la case et transforme la case Water en case Ground
     def initializeEntity(self,arena,entity):
@@ -25,7 +26,7 @@ class CaseWater(Case):
             if (self.entity) :
                 print(self.entity.printType(), end=' ')
             elif(not self.isFog):
-                print("~", end=' ')
+                print(affiche, end=' ')
             else:
                 print("*", end=' ')
                 

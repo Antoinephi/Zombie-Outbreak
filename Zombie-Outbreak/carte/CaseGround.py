@@ -9,8 +9,9 @@ from carte.Case import Case
 class CaseGround(Case):
     
     def __init__(self, coo):        
-        self.isPietinable = True
         super(CaseGround, self).__init__(coo)
+        self.isPietinable = True
+        self.affiche = '.'
     
     #Methode pour initialiser une entite dans la case
     def initializeEntity(self,arena,entity):
@@ -22,7 +23,7 @@ class CaseGround(Case):
             if (self.entity) :
                 print (self.entity.printType(), end=' ')
             elif(not self.isFog):
-                print(".", end=' ')
+                print(affiche, end=' ')
             else:
                 print("*", end=' ')
                 

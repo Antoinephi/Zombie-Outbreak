@@ -11,7 +11,8 @@ class Case():
         self.coo = coo
         self.isFog = True
         self.entity = None    
-    
+        self.affiche = ' '
+        
     def getCoo(self):
         return self.coo
         
