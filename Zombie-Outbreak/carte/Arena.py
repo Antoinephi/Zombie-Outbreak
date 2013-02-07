@@ -28,6 +28,12 @@ class Arena:
                     self.grid[i][j] = CaseGround(coo)
                 else:
                     self.grid[i][j] = CaseWater(coo)
+                    
+    def getRows(self):
+        return self.rows
+    
+    def getCols(self):
+        return self.cols
         
     def getCase(self,rows,cols):
         return self.grid[rows][cols]
