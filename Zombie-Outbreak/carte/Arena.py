@@ -1,3 +1,4 @@
+
 '''
 Created on 28 janv. 2013
 
@@ -45,10 +46,19 @@ class Arena:
         
     def print_arena(self):
         for i in range(self.rows):
-            print(i, end=' ')
-        print()
+            print(i),
+        print ' '
         for i in range(self.rows):
             for j in range(self.cols):
                     self.grid[i][j].print_case()
             print(i)
+            
+    def killDead(self):
+        i = 0
+        j = 0
+        for i in range(self.getRows()):
+            for j in range(self.getCols()):
+                if(self.getCase(i, j).getEntity() != None):
+                    if(not self.getCase(i, j).getEntity().isAlive()):
+                        self.getCase(i, j).setEntity(None)
     

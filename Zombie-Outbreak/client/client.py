@@ -4,12 +4,12 @@ Created on 31 janv. 2013
 @author: philippa
 '''
 
+from carte import Coordonnees, CaseWater, Arena
+import socket
 import sys
 
 print(sys.version)
 
-import socket
-from carte import Arena
 # infos de connexion au serveur
 hote = "localhost"
 port = 8080
@@ -42,7 +42,6 @@ def config(msg):
         i += 1
         
 #nick = login()
-import sys
 print(sys.version)
 connexion_client = connection()
 print("connecte au serveur")
@@ -59,3 +58,4 @@ while(msg_recu != ""):
         
         pass
 
+connexion_client.close()

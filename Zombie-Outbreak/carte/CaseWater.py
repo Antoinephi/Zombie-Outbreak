@@ -9,7 +9,7 @@ from carte.CaseGround import CaseGround
 class CaseWater(Case):
     
     def __init__(self, coo):
-        super(CaseWater,self).__init__(coo)
+        Case.__init__(self, coo)
         self.isPietinable = False
         self.affiche = '~'
     
@@ -24,11 +24,9 @@ class CaseWater(Case):
     #Methode pour afficher la case Water sous forme d'un "~" pour le mode textuel du jeu              
     def print_case(self):
             if (self.entity) :
-                print(self.entity.printType(), end=' ')
-            elif(not self.isFog):
-                print(self.affiche, end=' ')
+                print(self.entity.printType()),
             else:
-                print("*", end=' ')
+                print(self.affiche),
                 
     def getType(self):
         return "water"

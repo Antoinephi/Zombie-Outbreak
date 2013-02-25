@@ -4,23 +4,19 @@ Created on 27 janv. 2013
 @author: Antoine
 '''
 
+from entities.Entity import Entity
+
 class Case(): 
     
     
     def __init__(self, coo):
         self.coo = coo
-        self.isFog = False
         self.entity = None    
         self.affiche = ' '
+        self.isPietinable = True
         
     def getCoo(self):
         return self.coo
-        
-    def setFog(self, isFog):
-        self.isFog = isFog
-    
-    def isFog(self):
-        return self.isFog
         
     def getPietinable(self):
         return self.isPietinable 

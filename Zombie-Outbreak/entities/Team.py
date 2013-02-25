@@ -7,14 +7,14 @@ from entities.Zombi import Zombi
 
 class Team():
     
-    def __init__(self,name,nbZombi,a):
+    def __init__(self,name,nbZombi,arena):
         self.name = name
         self.inGame = True
         self.zombis = [None] * nbZombi
         for i in range(nbZombi):
             j = str(i+1)
             s = "Zombi " + j
-            self.zombis[i] = Zombi(s,False,a)
+            self.zombis[i] = Zombi(s,False,arena)
             
     def printTeam(self):
         for i in range(len(self.zombis)):

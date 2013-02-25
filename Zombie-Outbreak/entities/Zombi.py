@@ -5,17 +5,18 @@ Created on 28 janv. 2013
 '''
 
 from entities.Entity import Entity
+import ast
 
 class Zombi(Entity):
     
     def __init__(self,s,policier,a):
-        self.ATTACK_RADIUS = (1)
-        self.CONTAGION_AMOUNT = (10)
-        self.contagionCount = 10
-        self.CONTAGION_RADIUS = (2)
-        super(Zombi,self).__init__(s,a)
+        Entity.__init__(self,s,a)
+        self.ATTACK_RADIUS = (self.cfg.getData(1))
+        self.CONTAGION_AMOUNT = ast.literal_eval(self.cfg.getData(6))
+        self.contagionCount = ast.literal_eval(self.cfg.getData(6))
+        self.CONTAGION_RADIUS = ast.literal_eval(self.cfg.getData(12))
         if (policier == True):
-            super(Zombi,self).setBulletAmount(9)
+            self.setBulletAmount(self.cfg.getData(11))
             
     def getContagionAmount(self):
         return self.CONTAGION_AMOUNT
@@ -28,6 +29,6 @@ class Zombi(Entity):
     
     def setContagionCount(self,i):
         self.contagionCount = i
-        
+    
     def printType(self):
         return "Z"        

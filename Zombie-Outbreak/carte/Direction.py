@@ -8,19 +8,19 @@ class Direction():
     pass
 
 
-class Up(Direction):
+class North(Direction):
     x = -1
     y = 0
     
-class Down(Direction):    
+class South(Direction):    
     x = 1
     y = 0
     
-class Left(Direction):
+class West(Direction):
     x = 0
     y = -1
     
-class Right(Direction):
+class East(Direction):
     x = 0
     y = 1 
         
