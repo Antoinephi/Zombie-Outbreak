@@ -52,7 +52,28 @@ class Arena:
             for j in range(self.cols):
                     self.grid[i][j].print_case()
             print(i)
-            
+    
+    def nextTurn(self):
+        i = 0 
+        j = 0
+        list = [6]
+        size = 0
+        flag = False
+        for i in range(self.getRows()):
+            for j in range(self.getCols()):
+                if(self.getCase(i, j).getEntity() != None):
+                    t = 0
+                    for t in range(size):
+                        if(list[t] == self.getCase(i, j).getEntity()):
+                            flag = True
+                    if(flag == False):                        
+                        if(self.getCase(i, j).getEntity().printType() == 'B'):
+                            self.getCase(i, j).getEntity().decrementDelay()
+                        self.getCase(i, j).getEntity().getBrain().nextAction()
+                        self.killDead()
+                        list.append(self.getCase(i, j).getEntity())
+                        size += 1
+         
     def killDead(self):
         i = 0
         j = 0

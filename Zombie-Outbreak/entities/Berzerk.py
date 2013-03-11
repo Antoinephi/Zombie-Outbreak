@@ -22,6 +22,7 @@ class Berzerk(Entity):
     
     def decrementDelay(self):
         self.berzerkDelay -= 1
+        
     def getBerzerkRadius(self):
         return self.BERZERK_RADIUS
     

@@ -21,6 +21,7 @@ class Entity():
         self.VIEW_RADIUS = ast.literal_eval(self.cfg.getData(4))
         self.SHOT_RADIUS = ast.literal_eval(self.cfg.getData(9))
         self.SHOT_SUCCESS = ast.literal_eval(self.cfg.getData(10))
+        self.brain = None
         
     def getName(self):
         return self.name
@@ -31,6 +32,9 @@ class Entity():
     def getShotRadius(self):
         return self.SHOT_RADIUS
     
+    def getViewRadius(self):
+        return self.VIEW_RADIUS
+    
     def getCase(self):
         return self.case
     
@@ -39,6 +43,9 @@ class Entity():
     
     def isAlive(self):
         return self.alive
+    
+    def getBrain(self):
+        return self.brain
     
     def setName(self,s):
         self.name = s
@@ -51,7 +58,10 @@ class Entity():
       
     def setCase(self,c):
         self.case = c
-           
+       
+    def setBrain(self, b):
+        self.brain = b
+            
     def printType(self):
         pass
     

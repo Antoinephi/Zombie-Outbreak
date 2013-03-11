@@ -19,4 +19,6 @@ class Coordonnees:
     def getY(self):
         return self.y
     
+    def toString(self):
+        return "[%i][%i]"%(self.x, self.y) 
     
